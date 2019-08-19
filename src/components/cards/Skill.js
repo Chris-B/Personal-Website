@@ -6,7 +6,7 @@ class Skill extends Component {
         return (
             <div className="skill-wrapper">
                 <img class={"skill-img"} src={"/resources/skills/".concat(this.props.thumbnail)} alt={this.props.imgalt} />
-                <h2 class={"skill-title"}>{this.props.title}</h2>
+                <h3 class={"skill-title"}>{this.props.title}</h3>
             </div>
         );
     }

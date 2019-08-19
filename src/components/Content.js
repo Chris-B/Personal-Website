@@ -9,12 +9,12 @@ import Contact from "./pages/Contact";
 
 const Content = () => {
     return (
-        <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/portfolio" component={Portfolio}/>
-            <Route path="/about" component={About}/>
-            <Route path="/contact" component={Contact}/>
-        </Switch>
+        <div className="content-wrapper">
+            <Home />
+            <Portfolio />
+            <About />
+            <Contact />
+        </div>
     );
 };
 
