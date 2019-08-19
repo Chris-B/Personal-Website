@@ -1,0 +1,12 @@
+.nav-bar {
+    background: -webkit-linear-gradient( 296.2deg, rgb(55, 55, 85) 36.1%, rgb(47, 48, 77) 93.6% );
+    background: linear-gradient( 296.2deg, rgb(55, 55, 85) 36.1%, rgb(47, 48, 77) 93.6% );
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index:1;
+}
