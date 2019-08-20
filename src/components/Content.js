@@ -11,9 +11,6 @@ const Content = () => {
     return (
         <div className="content-wrapper">
             <Home />
-            <Portfolio />
-            <About />
-            <Contact />
         </div>
     );
 };
