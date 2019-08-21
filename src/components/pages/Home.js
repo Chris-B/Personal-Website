@@ -10,7 +10,7 @@ class Home extends Component {
                     <div className="profile-image" />
                     <div className="profile-details">
                         <h1>Software Engineer</h1>
-                        <h2>Desktop and Web Application Developer</h2>
+                        <h2>Desktop and Web Application Developers</h2>
                         <div className="skill-cards">
                             <Skill thumbnail={"java.png"} imgalt={"java"} title={"Java"} imglink={"https://www.java.com/"}/>
                             <Skill thumbnail={"python.png"} imgalt={"python"} title={"Python"} imglink={"https://www.python.org/"}/>
