@@ -15,6 +15,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import HomeIcon from '@material-ui/icons/Home';
+import WorkIcon from '@material-ui/icons/Work';
 import {SwipeableDrawer} from "@material-ui/core";
 
 import Divider from '@material-ui/core/Divider';
@@ -92,10 +93,10 @@ function Navigation() {
                     <Link class={classes.appBarLink} to="/">
                         <Button className="toolbar-button" color="inherit">Home</Button>
                     </Link>
-                    {/*<Link class={classes.appBarLink} to="/portfolio">
+                    <Link class={classes.appBarLink} to="/portfolio">
                         <Button className="toolbar-button" color="inherit">Portfolio</Button>
                     </Link>
-                    <Link class={classes.appBarLink} to="/about">
+                    {/*<Link class={classes.appBarLink} to="/about">
                         <Button className="toolbar-button" color="inherit">About</Button>
                     </Link>
                     <Link class={classes.appBarLink} to="/contact">
@@ -129,13 +130,13 @@ function Navigation() {
                             <ListItemText primary="Home" />
                         </ListItem>
                     </Link>
-                    {/*<Link class="no-style" to="/portfolio">
+                    <Link class="no-style" to="/portfolio">
                         <ListItem button key="Portfolio">
                             <ListItemIcon><WorkIcon /></ListItemIcon>
                             <ListItemText primary="Portfolio" />
                         </ListItem>
                     </Link>
-                    <Link class="no-style" to="/about">
+                    {/*<Link class="no-style" to="/about">
                         <ListItem button key="About">
                             <ListItemIcon><PersonIcon /></ListItemIcon>
                             <ListItemText primary="About" />
