@@ -90,19 +90,12 @@ function Navigation() {
                     <Typography variant="h6" className={classes.title}>
                         Christopher Barclay
                     </Typography>
-                    {/*<div className={classes.menuSeparator} />*/}
                     <Link class={classes.appBarLink} to="/">
                         <Button className="toolbar-button" color="inherit">Home</Button>
                     </Link>
                     <Link class={classes.appBarLink} to="/portfolio">
                         <Button className="toolbar-button" color="inherit">Portfolio</Button>
                     </Link>
-                    {/*<Link class={classes.appBarLink} to="/about">
-                        <Button className="toolbar-button" color="inherit">About</Button>
-                    </Link>
-                    <Link class={classes.appBarLink} to="/contact">
-                        <Button className="toolbar-button" color="inherit">Contact</Button>
-                    </Link>*/}
                     <div className={classes.appBarHide} style={{ borderRight: '0.1em solid Gainsboro', paddingRight: '0.5em', height: '20px', }} />
                     <Button style={{ paddingLeft: '1.1em', }} className={classes.appBarHide} color="inherit" target="_blank" href="https://www.linkedin.com/in/christopher-b/">LinkedIn</Button>
                     <Button className={classes.appBarHide} color="inherit" target="_blank" href="https://github.com/Chris-Barclay">GitHub</Button>
@@ -137,18 +130,6 @@ function Navigation() {
                             <ListItemText primary="Portfolio" />
                         </ListItem>
                     </Link>
-                    {/*<Link class="no-style" to="/about">
-                        <ListItem button key="About">
-                            <ListItemIcon><PersonIcon /></ListItemIcon>
-                            <ListItemText primary="About" />
-                        </ListItem>
-                    </Link>
-                    <Link class="no-style" to="/contact">
-                        <ListItem button key="Contact">
-                            <ListItemIcon><MailIcon /></ListItemIcon>
-                            <ListItemText primary="Contact" />
-                        </ListItem>
-                    </Link>*/}
                 </List>
                 <Divider />
                 <List className={classes.list}>
