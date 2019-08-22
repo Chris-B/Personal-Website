@@ -16,6 +16,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import HomeIcon from '@material-ui/icons/Home';
 import WorkIcon from '@material-ui/icons/Work';
+import EmailIcon from '@material-ui/icons/Email';
 import {SwipeableDrawer} from "@material-ui/core";
 
 import Divider from '@material-ui/core/Divider';
@@ -103,9 +104,9 @@ function Navigation() {
                         <Button className="toolbar-button" color="inherit">Contact</Button>
                     </Link>*/}
                     <div className={classes.appBarHide} style={{ borderRight: '0.1em solid Gainsboro', paddingRight: '0.5em', height: '20px', }} />
-                    <Button style={{ paddingLeft: '1.1em', }}
-                            className={classes.appBarHide} color="inherit" target="_blank" href="https://www.linkedin.com/in/christopher-b/">LinkedIn</Button>
+                    <Button style={{ paddingLeft: '1.1em', }} className={classes.appBarHide} color="inherit" target="_blank" href="https://www.linkedin.com/in/christopher-b/">LinkedIn</Button>
                     <Button className={classes.appBarHide} color="inherit" target="_blank" href="https://github.com/Chris-Barclay">GitHub</Button>
+                    <Button className={classes.appBarHide} color="inherit" href="mailto:chris@chrisbarclay.dev">Email</Button>
                 </Toolbar>
             </AppBar>
             <SwipeableDrawer
@@ -158,6 +159,10 @@ function Navigation() {
                     <ListItem button key="GitHub" component="a" target="_blank" href="https://github.com/Chris-Barclay">
                         <ListItemIcon><GitHub /></ListItemIcon>
                         <ListItemText primary="GitHub" />
+                    </ListItem>
+                    <ListItem button key="Email" component="a" href="mailto:chris@chrisbarclay.dev">
+                        <ListItemIcon><EmailIcon /></ListItemIcon>
+                        <ListItemText primary="Email" />
                     </ListItem>
                 </List>
             </SwipeableDrawer>

@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Footer from "./Footer";
 
 
 const Content = () => {
@@ -14,6 +15,7 @@ const Content = () => {
                 <Route path="/portfolio" component={Portfolio} />
                 <Route path="/contact" component={Contact} />
             </Switch>
+            <Footer/>
         </div>
     );
 };
