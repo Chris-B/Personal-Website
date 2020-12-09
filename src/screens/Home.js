@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import "../css/Home.css";
-import Skill from "../cards/Skill.js";
+import "stylesheets/Home.css";
+import Skill from "components/cards/Skill.js";
 
 class Home extends Component {
     render() {
         return (
             <div className="home-wrapper">
                 <div className="profile">
-                    <div className="profile-image" />
+                    <img className="profile-image" src={process.env.PUBLIC_URL + "/img/self.png"} alt={"Me"} />
                     <div className="profile-details">
                         <h1>Software Engineer</h1>
                         <h2>Desktop and Web Application Developer</h2>

@@ -20,10 +20,10 @@ import EmailIcon from '@material-ui/icons/Email';
 import {SwipeableDrawer} from "@material-ui/core";
 
 import Divider from '@material-ui/core/Divider';
-import LinkedIn from "./icons/LinkedIn";
-import GitHub from "./icons/GitHub";
+import LinkedIn from "components/icons/LinkedIn";
+import GitHub from "components/icons/GitHub";
 
-import './css/Navigation.css';
+import 'stylesheets/Navigation.css';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -98,7 +98,7 @@ function Navigation() {
                     </Link>
                     <div className={classes.appBarHide} style={{ borderRight: '0.1em solid Gainsboro', paddingRight: '0.5em', height: '20px', }} />
                     <Button style={{ paddingLeft: '1.1em', }} className={classes.appBarHide} color="inherit" target="_blank" href="https://www.linkedin.com/in/christopher-b/">LinkedIn</Button>
-                    <Button className={classes.appBarHide} color="inherit" target="_blank" href="https://github.com/Chris-Barclay">GitHub</Button>
+                    <Button className={classes.appBarHide} color="inherit" target="_blank" href="https://github.com/Chris-B">GitHub</Button>
                     <Button className={classes.appBarHide} color="inherit" href="mailto:chris@chrisbarclay.dev">Email</Button>
                 </Toolbar>
             </AppBar>
@@ -137,7 +137,7 @@ function Navigation() {
                         <ListItemIcon><LinkedIn /></ListItemIcon>
                         <ListItemText primary="LinkedIn" />
                     </ListItem>
-                    <ListItem button key="GitHub" component="a" target="_blank" href="https://github.com/Chris-Barclay">
+                    <ListItem button key="GitHub" component="a" target="_blank" href="https://github.com/Chris-B">
                         <ListItemIcon><GitHub /></ListItemIcon>
                         <ListItemText primary="GitHub" />
                     </ListItem>

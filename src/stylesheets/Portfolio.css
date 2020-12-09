@@ -1,16 +1,13 @@
 .portfolio-wrapper {
     width: 100%;
-    height: 100%;
-    padding-top: 150px;
 }
 
 .project-cards {
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 61px;
+    margin: 40px auto;
 }
 
 .project-wrapper {
