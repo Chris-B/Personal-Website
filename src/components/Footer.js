@@ -5,7 +5,7 @@ import "stylesheets/Footer.css";
 const Footer = () => {
     return (
         <div className="footer-wrapper">
-            <p className="copyright">&copy; 2021 Copyright: chrisbarclay.dev</p>
+            <p className="copyright">Copyright &copy; 2021 Chris Barclay LLC</p>
         </div>
     );
 };
