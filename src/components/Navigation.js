@@ -97,7 +97,7 @@ function Navigation() {
                         <Button className="toolbar-button" color="inherit">Portfolio</Button>
                     </Link>
                     <div className={classes.appBarHide} style={{ borderRight: '0.1em solid Gainsboro', paddingRight: '0.5em', height: '20px', }} />
-                    <Button style={{ paddingLeft: '1.1em', }} className={classes.appBarHide} color="inherit" target="_blank" href="https://www.linkedin.com/in/christopher-b/">LinkedIn</Button>
+                    <Button style={{ paddingLeft: '1.1em', }} className={classes.appBarHide} color="inherit" target="_blank" href="https://www.linkedin.com/in/chris-barclay/">LinkedIn</Button>
                     <Button className={classes.appBarHide} color="inherit" target="_blank" href="https://github.com/Chris-B">GitHub</Button>
                     <Button className={classes.appBarHide} color="inherit" href="mailto:chris@chrisbarclay.dev">Email</Button>
                 </Toolbar>
