@@ -25,6 +25,9 @@ import GitHub from "components/icons/GitHub";
 
 import 'stylesheets/Navigation.css';
 
+import { analytics } from "firebase";
+import { logEvent } from "firebase/analytics";
+
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
@@ -78,6 +81,10 @@ function Navigation() {
         setOpen(false);
     }
 
+    function logAnalyticEvent(event) {
+        logEvent(analytics, event)
+    }
+
     const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
     return (
@@ -97,9 +104,9 @@ function Navigation() {
                         <Button className="toolbar-button" color="inherit">Portfolio</Button>
                     </Link>
                     <div className={classes.appBarHide} style={{ borderRight: '0.1em solid Gainsboro', paddingRight: '0.5em', height: '20px', }} />
-                    <Button style={{ paddingLeft: '1.1em', }} className={classes.appBarHide} color="inherit" target="_blank" href="https://www.linkedin.com/in/chris-barclay/">LinkedIn</Button>
-                    <Button className={classes.appBarHide} color="inherit" target="_blank" href="https://github.com/Chris-B">GitHub</Button>
-                    <Button className={classes.appBarHide} color="inherit" href="mailto:chris@chrisbarclay.dev">Email</Button>
+                    <Button style={{ paddingLeft: '1.1em', }} className={classes.appBarHide} color="inherit" target="_blank" href="https://www.linkedin.com/in/chris-barclay/" onClick={()=>logAnalyticEvent('linkedin_click')}>LinkedIn</Button>
+                    <Button className={classes.appBarHide} color="inherit" target="_blank" href="https://github.com/Chris-B" onClick={()=>logAnalyticEvent('github_click')}>GitHub</Button>
+                    <Button className={classes.appBarHide} color="inherit" href="mailto:chris@chrisbarclay.dev" onClick={()=>logAnalyticEvent('email_click')}>Email</Button>
                 </Toolbar>
             </AppBar>
             <SwipeableDrawer
@@ -133,15 +140,15 @@ function Navigation() {
                 </List>
                 <Divider />
                 <List className={classes.list}>
-                    <ListItem button key="LinkedIn" component="a" target="_blank" href="https://www.linkedin.com/in/christopher-b/">
+                    <ListItem button key="LinkedIn" component="a" target="_blank" href="https://www.linkedin.com/in/chris-barclay/" onClick={()=>logAnalyticEvent('linkedin_click')}>
                         <ListItemIcon><LinkedIn /></ListItemIcon>
                         <ListItemText primary="LinkedIn" />
                     </ListItem>
-                    <ListItem button key="GitHub" component="a" target="_blank" href="https://github.com/Chris-B">
+                    <ListItem button key="GitHub" component="a" target="_blank" href="https://github.com/Chris-B" onClick={()=>logAnalyticEvent('github_click')}>
                         <ListItemIcon><GitHub /></ListItemIcon>
                         <ListItemText primary="GitHub" />
                     </ListItem>
-                    <ListItem button key="Email" component="a" href="mailto:chris@chrisbarclay.dev">
+                    <ListItem button key="Email" component="a" href="mailto:chris@chrisbarclay.dev" onClick={()=>logAnalyticEvent('email_click')}>
                         <ListItemIcon><EmailIcon /></ListItemIcon>
                         <ListItemText primary="Email" />
                     </ListItem>
