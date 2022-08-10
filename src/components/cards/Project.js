@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "stylesheets/Portfolio.css";
 
-import { analytics } from "firebase";
+import { analytics } from "../../firebase";
 import { logEvent } from "firebase/analytics";
 
 class Project extends Component {

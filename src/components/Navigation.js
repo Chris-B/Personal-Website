@@ -1,75 +1,79 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 
-import HomeIcon from '@material-ui/icons/Home';
-import WorkIcon from '@material-ui/icons/Work';
-import EmailIcon from '@material-ui/icons/Email';
-import {SwipeableDrawer} from "@material-ui/core";
+import { useTheme } from '@mui/material/styles';
+import { makeStyles } from 'tss-react/mui';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 
-import Divider from '@material-ui/core/Divider';
+import HomeIcon from '@mui/icons-material/Home';
+import WorkIcon from '@mui/icons-material/Work';
+import EmailIcon from '@mui/icons-material/Email';
+import {SwipeableDrawer} from "@mui/material";
+import Divider from '@mui/material/Divider';
+
 import LinkedIn from "components/icons/LinkedIn";
 import GitHub from "components/icons/GitHub";
 
 import 'stylesheets/Navigation.css';
 
-import { analytics } from "firebase";
+import { analytics } from "../firebase";
 import { logEvent } from "firebase/analytics";
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    list: {
-        width: 200,
-    },
-    title: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    menuSeparator: {
-        all: 'unset',
-        flexGrow: 1,
-    },
-    drawer: {
-        flexShrink: 0,
-    },
-    drawerHeader: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: '0 8px',
-        ...theme.mixins.toolbar,
-        justifyContent: 'flex-end',
-    },
-    appBarLink: {
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
+const useStyles = makeStyles()((theme) => {
+    return {
+        root: {
+            flexGrow: 1,
         },
-        all: 'unset',
-    },
-    appBarHide: {
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
+        list: {
+            width: 200,
         },
-    },
-}));
+        title: {
+            flexGrow: 1,
+        },
+        menuButton: {
+            marginRight: theme.spacing(2),
+        },
+        menuSeparator: {
+            all: 'unset',
+            flexGrow: 1,
+        },
+        drawer: {
+            flexShrink: 0,
+        },
+        drawerHeader: {
+            display: 'flex',
+            alignItems: 'center',
+            padding: '0 8px',
+            ...theme.mixins.toolbar,
+            justifyContent: 'flex-end',
+        },
+        appBarLink: {
+            [theme.breakpoints.down('sm')]: {
+                display: 'none',
+            },
+            all: 'unset',
+        },
+        appBarHide: {
+            [theme.breakpoints.down('sm')]: {
+                display: 'none',
+            },
+        },
+    };
+});
 
 function Navigation() {
-    const classes = useStyles();
+    const { classes } = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -85,7 +89,7 @@ function Navigation() {
         logEvent(analytics, event)
     }
 
-    const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const iOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
     return (
         <div className={classes.root} class={"top-bar"}>
